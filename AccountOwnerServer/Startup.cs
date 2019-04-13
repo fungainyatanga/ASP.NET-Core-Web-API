@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AccountOwnerServer.Extensions;
@@ -12,13 +13,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NLog;
+using NLog.Extensions.Logging;
 
 namespace AccountOwnerServer
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
+            loggerFactory.ConfigureNLog(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             Configuration = configuration;
         }
 
@@ -29,7 +34,9 @@ namespace AccountOwnerServer
         {
             services.ConfigureCors();
 
-            services.ConfigureIISIntegration(); 
+            services.ConfigureIISIntegration();
+
+            services.ConfigureLoggerService();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -50,11 +57,11 @@ namespace AccountOwnerServer
             app.UseHttpsRedirection();
 
             app.UseCors("CorsPolicy");
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            app.UseForwardedHeaders(new ForwardedHeadersOptions //forwards proxy headers to the current request helps with linux deployment 
             {
                 ForwardedHeaders = ForwardedHeaders.All
             });
-            app.UseStaticFiles();
+            app.UseStaticFiles();    //enables using static files for the request, if no path set it will use www.root folder by default 
 
             app.UseMvc();
         }

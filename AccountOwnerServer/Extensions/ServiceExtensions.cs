@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Contracts;
+using LoggerService;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -23,12 +25,18 @@ namespace AccountOwnerServer.Extensions
             });
         }
 
+        //IIS integration which will help us with the IIS deployment
         public static void ConfigureIISIntegration(this IServiceCollection services)
         {
             services.Configure<IISOptions>(options =>
             {
 
             });
+        }
+
+        public static void ConfigureLoggerService(this IServiceCollection services)
+        {
+            services.AddSingleton<ILoggerManager, LoggerManager>();
         }
     }
 }

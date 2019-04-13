@@ -1,0 +1,12 @@
+2019-04-13 14:16:20.3519 INFO Here is info message from our values controller.
+2019-04-13 14:16:20.4878 DEBUG Here is debug message from our values controller.
+2019-04-13 14:16:20.4878 WARN Here is warn message from our values controller.
+2019-04-13 14:16:20.4878 ERROR Here is error message from our values controller.
+2019-04-13 14:29:09.6312 INFO Here is info message from our values controller.
+2019-04-13 14:29:09.6862 DEBUG Here is debug message from our values controller.
+2019-04-13 14:29:09.6953 WARN Here is warn message from our values controller.
+2019-04-13 14:29:09.7048 ERROR Here is error message from our values controller.
+2019-04-13 14:29:44.8538 INFO Here is info message from our values controller.
+2019-04-13 14:29:44.8612 DEBUG Here is debug message from our values controller.
+2019-04-13 14:29:44.8612 WARN Here is warn message from our values controller.
+2019-04-13 14:29:44.8612 ERROR Here is error message from our values controller.
