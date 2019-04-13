@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,14 @@ namespace AccountOwnerServer.Extensions
                     .AllowCredentials());
             });
         }
+
+        public static void ConfigureIISIntegration(this IServiceCollection services)
+        {
+            services.Configure<IISOptions>(options =>
+            {
+
+            });
+        }
     }
 }
 
@@ -31,4 +40,9 @@ namespace AccountOwnerServer.Extensions
  * the AllowAnyOrigin() method which allows requests from any
  * source, you could use the WithOrigins("http://www.something.com")
  * which will allow requests just from the specified source. 
+ *  Also, instead of AllowAnyMethod() that allows all HTTP methods, 
+ *  you can use WithMethods("POST", "GET") that will allow only specified 
+ *  HTTP methods. Furthermore, you can make the same changes for the 
+ *  AllowAnyHeader() method by using, for example, the WithHeaders("accept", 
+ *  "content-type") method to allow only specified headers.
  */
