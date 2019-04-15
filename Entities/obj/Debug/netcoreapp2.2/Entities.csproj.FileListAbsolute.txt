@@ -1,0 +1,12 @@
+C:\dbProject\Entities\bin\Debug\netcoreapp2.2\Entities.deps.json
+C:\dbProject\Entities\bin\Debug\netcoreapp2.2\Entities.dll
+C:\dbProject\Entities\bin\Debug\netcoreapp2.2\Entities.pdb
+C:\dbProject\Entities\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.dll
+C:\dbProject\Entities\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.xml
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.csprojAssemblyReference.cache
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.csproj.CoreCompileInputs.cache
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.AssemblyInfoInputs.cache
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.AssemblyInfo.cs
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.csproj.CopyComplete
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.dll
+C:\dbProject\Entities\obj\Debug\netcoreapp2.2\Entities.pdb

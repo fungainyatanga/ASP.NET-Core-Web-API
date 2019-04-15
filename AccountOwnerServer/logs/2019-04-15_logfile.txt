@@ -14,3 +14,7 @@
 2019-04-15 10:37:27.0778 INFO Returned owner with details for id: 261e1685-cf26-494c-b17c-3546e65f5620
 2019-04-15 13:15:12.2754 INFO Returned owner with details for id: 261e1685-cf26-494c-b17c-3546e65f5620
 2019-04-15 13:15:30.5186 INFO Returned all owners from the database.
+2019-04-15 13:42:35.8167 INFO Returned all owners from the database.
+2019-04-15 13:42:39.8895 INFO Returned all owners from the database.
+2019-04-15 13:42:52.8752 INFO Return owner with id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-04-15 13:43:02.7005 INFO Returned owner with details for id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
