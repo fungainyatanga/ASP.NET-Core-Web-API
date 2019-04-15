@@ -1,0 +1,9 @@
+2019-04-15 08:40:27.7460 INFO Returned all owners from the database.
+2019-04-15 08:40:36.5149 INFO Returned all owners from the database.
+2019-04-15 09:15:13.4970 INFO Returned all owners from the database.
+2019-04-15 09:18:08.1051 INFO Return owner with id: a3c1880c-674c-4d18-8f91-5d3608a2c937
+2019-04-15 09:18:24.9617 ERROR Owner with : a3c1880c-674c-4d18-8f91-5d3608a2c930, hasn't been found in db.
+2019-04-15 09:18:43.2274 INFO Return owner with id: a3c1880c-674c-4d18-8f91-5d3608a2c937
+2019-04-15 10:03:40.8454 INFO Return owner with id: a3c1880c-674c-4d18-8f91-5d3608a2c937
+2019-04-15 10:03:56.8844 INFO Returned owner with details for id: a3c1880c-674c-4d18-8f91-5d3608a2c937
+2019-04-15 10:04:18.9209 INFO Returned owner with details for id: a3c1880c-674c-4d18-8f91-5d3608a2c937

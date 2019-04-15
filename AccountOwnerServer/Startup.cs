@@ -67,7 +67,10 @@ namespace AccountOwnerServer
             });
             app.UseStaticFiles();    //enables using static files for the request, if no path set it will use www.root folder by default 
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

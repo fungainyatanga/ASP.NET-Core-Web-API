@@ -11,7 +11,7 @@ namespace AccountOwnerServer.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly ILoggerManager _logger;
+       
         private IRepositoryWrapper _repoWrapper;
 
         public ValuesController(IRepositoryWrapper repositoryWrapper)
@@ -23,8 +23,8 @@ namespace AccountOwnerServer.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         { 
-                var domesticAccounts = _repoWrapper.Account.FindByCondition(x => x.AccountType.Equals("Domestic"));
-                var owners = _repoWrapper.Owner.FindAll();
+             //   var domesticAccounts = _repoWrapper.Account.FindByCondition(x => x.AccountType.Equals("Domestic"));
+               // var owners = _repoWrapper.Owner.FindAll();
 
                 return new string[] { "value1", "value2" };
             }
