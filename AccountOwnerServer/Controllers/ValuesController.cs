@@ -12,23 +12,26 @@ namespace AccountOwnerServer.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly ILoggerManager _logger;
+        private IRepositoryWrapper _repoWrapper;
 
-        public ValuesController(ILoggerManager logger)
+        public ValuesController(IRepositoryWrapper repositoryWrapper)
         {
-            _logger = logger;
+            _repoWrapper = repositoryWrapper;
         }
+
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            _logger.LogInfo("Here is info message from our values controller.");
-            _logger.LogDebug("Here is debug message from our values controller.");
-            _logger.LogWarn("Here is warn message from our values controller.");
-            _logger.LogError("Here is error message from our values controller.");
+        public IEnumerable<string> Get()
+        { 
+                var domesticAccounts = _repoWrapper.Account.FindByCondition(x => x.AccountType.Equals("Domestic"));
+                var owners = _repoWrapper.Owner.FindAll();
 
-            return new string[] { "value1", "value2" };
-        }
+                return new string[] { "value1", "value2" };
+            }
+        
 
+      
+        
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)

@@ -1,7 +1,11 @@
 ﻿using Contracts;
+using Entities;
 using LoggerService;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +15,7 @@ namespace AccountOwnerServer.Extensions
 {
     public static class ServiceExtensions
     {
-
+        
         //configure CORS is a mechanism that gives rights to the user to access resources from the server on a different domain
         public static void ConfigureCors(this IServiceCollection services)
         {
@@ -37,6 +41,18 @@ namespace AccountOwnerServer.Extensions
         public static void ConfigureLoggerService(this IServiceCollection services)
         {
             services.AddSingleton<ILoggerManager, LoggerManager>();
+        }
+
+        //configuring the MySQL context
+        public static void ConfigureMySqlContext(this IServiceCollection services, IConfiguration config)
+        {
+            //With the help of the IConfiguration config parameter, you can access the appsettings.json file and take all the data you need from it
+            var connectionString = config["mysqlconnection:connectionString"];
+            services.AddDbContext<RepositoryContext>(o => o.UseMySql(connectionString));
+        }
+        public static void ConfigureRepositoryWrapper(this IServiceCollection services)
+        {
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }
     }
 }

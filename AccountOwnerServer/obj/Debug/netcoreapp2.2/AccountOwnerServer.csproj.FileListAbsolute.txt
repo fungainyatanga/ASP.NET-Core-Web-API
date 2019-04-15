@@ -4,9 +4,13 @@ C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\AccountOwnerServer.runti
 C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\AccountOwnerServer.dll
 C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\AccountOwnerServer.pdb
 C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\Contracts.dll
+C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\Entities.dll
 C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\LoggerService.dll
+C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\Repository.dll
 C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\LoggerService.pdb
+C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\Repository.pdb
 C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\Contracts.pdb
+C:\dbProject\AccountOwnerServer\bin\Debug\netcoreapp2.2\Entities.pdb
 C:\dbProject\AccountOwnerServer\obj\Debug\netcoreapp2.2\AccountOwnerServer.csprojAssemblyReference.cache
 C:\dbProject\AccountOwnerServer\obj\Debug\netcoreapp2.2\AccountOwnerServer.csproj.CoreCompileInputs.cache
 C:\dbProject\AccountOwnerServer\obj\Debug\netcoreapp2.2\AccountOwnerServer.RazorAssemblyInfo.cache

@@ -33,6 +33,9 @@
             "projectReferences": {
               "C:\\dbProject\\LoggerService\\LoggerService.csproj": {
                 "projectPath": "C:\\dbProject\\LoggerService\\LoggerService.csproj"
+              },
+              "C:\\dbProject\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\dbProject\\Repository\\Repository.csproj"
               }
             }
           }
@@ -62,6 +65,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [
@@ -80,6 +87,63 @@
         "projectPath": "C:\\dbProject\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\fnyatanga\\.nuget\\packages\\",
         "outputPath": "C:\\dbProject\\Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fnyatanga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://proget.wvholdings.com/nuget/nuget/": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dbProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\dbProject\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dbProject\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dbProject\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\dbProject\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\fnyatanga\\.nuget\\packages\\",
+        "outputPath": "C:\\dbProject\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -176,6 +240,66 @@
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[1.0.0-rtm-rc3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dbProject\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dbProject\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\dbProject\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\fnyatanga\\.nuget\\packages\\",
+        "outputPath": "C:\\dbProject\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fnyatanga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://proget.wvholdings.com/nuget/nuget/": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dbProject\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\dbProject\\Contracts\\Contracts.csproj"
+              },
+              "C:\\dbProject\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\dbProject\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
             }
           },
           "imports": [
