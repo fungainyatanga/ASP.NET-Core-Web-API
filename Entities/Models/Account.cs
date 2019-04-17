@@ -7,7 +7,7 @@ using System.Text;
 namespace Entities.Models
 {
     [Table("account")]
-  public class Account
+  public class Account : IEntity
     {
         [Key]
         [Column("AccountId")]
@@ -21,6 +21,7 @@ namespace Entities.Models
 
         [Required(ErrorMessage = "Owner Id is required")]
         public Guid OwnerId { get; set; }
+
 
     }
 }

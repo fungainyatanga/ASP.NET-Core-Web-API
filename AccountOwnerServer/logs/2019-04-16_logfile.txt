@@ -1,0 +1,21 @@
+2019-04-16 10:30:59.0552 INFO Return owner with id: 24fd81f8-d58a-4bcc-9f35-dc6cd5641906
+2019-04-16 10:31:12.8680 INFO Returned all owners from the database.
+2019-04-16 13:10:41.4115 INFO Returned all owners from the database.
+2019-04-16 13:15:29.3792 ERROR Owner object sent from client is null
+2019-04-16 16:30:57.6697 INFO Returned all owners from the database.
+2019-04-16 16:31:34.8471 ERROR Something went wrong inside GetOwnerById action: The method or operation is not implemented.
+2019-04-16 16:31:47.2524 ERROR Something went wrong inside GetOwnerById action: The method or operation is not implemented.
+2019-04-16 16:31:59.3430 ERROR Something went wrong inside GetOwnerById action: The method or operation is not implemented.
+2019-04-16 16:36:31.9615 ERROR Something went wrong inside GetOwnerWithDetails action: The method or operation is not implemented.
+2019-04-16 16:36:40.0306 ERROR Something went wrong inside GetOwnerById action: The method or operation is not implemented.
+2019-04-16 18:55:17.5865 INFO Returned all owners from the database.
+2019-04-16 19:28:20.9935 INFO Return owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-04-16 19:29:40.0863 INFO Return owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-04-16 19:31:01.8353 INFO Return owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-04-16 20:13:33.5514 INFO Returned all owners from the database.
+2019-04-16 20:14:01.8898 INFO Returned all owners from the database.
+2019-04-16 20:14:44.6618 ERROR Something went wrong inside DeleteOwner action : Unknown column 'a.DateCreated' in 'field list'
+2019-04-16 20:15:03.3997 INFO Return owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-04-16 20:15:12.8751 ERROR Something went wrong inside DeleteOwner action : Unknown column 'a.DateCreated' in 'field list'
+2019-04-16 20:16:15.0280 INFO Return owner with id: 261e1685-cf26-494c-b17c-3546e65f5620
+2019-04-16 20:16:22.8358 ERROR Something went wrong inside DeleteOwner action : Unknown column 'a.DateCreated' in 'field list'

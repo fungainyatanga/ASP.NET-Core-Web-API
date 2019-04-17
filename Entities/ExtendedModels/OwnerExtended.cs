@@ -7,7 +7,7 @@ using System.Text;
 namespace Entities.ExtendedModels
 {
     //extended owner model (or DTO) which will help you return the owner with all related accounts to it.
-    public class OwnerExtended
+    public class OwnerExtended : IEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -22,5 +22,7 @@ namespace Entities.ExtendedModels
             DateOfBirth = owner.DateofBirth;
             Address = owner.Address;
         }
+
+       
     }
 }

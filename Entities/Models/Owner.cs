@@ -7,7 +7,7 @@ using System.Text;
 namespace Entities.Models
 {
     [Table("owner")]
-   public class Owner
+   public class Owner : IEntity
     {
         [Key]
         [Column("OwnerId")]
@@ -23,5 +23,7 @@ namespace Entities.Models
         [Required(ErrorMessage = "Address is required")]
         [StringLength(100, ErrorMessage = "Address cannot be longer than 100 characters")]
         public string Address { get; set; }
+
+       
     }
 }
