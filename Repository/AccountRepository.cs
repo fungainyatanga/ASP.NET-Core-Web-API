@@ -3,7 +3,9 @@ using Entities;
 using Entities.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -14,9 +16,10 @@ namespace Repository
         {
         }
 
-        public IEnumerable<Account> AccountsByOwner(Guid ownerId)
+        public async Task<IEnumerable<Account>> AccountsByOwnerAsync(Guid ownerId)
         {
-            return FindByCondition(a => a.OwnerId.Equals(ownerId));
+            var account = await FindByConditionAsync(a => a.OwnerId.Equals(ownerId));
+            return account.OrderBy(x => ownerId);
         }
     }
 }

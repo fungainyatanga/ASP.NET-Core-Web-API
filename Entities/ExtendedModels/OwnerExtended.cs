@@ -13,7 +13,11 @@ namespace Entities.ExtendedModels
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Address { get; set; }
-        public IQueryable<Account> Accounts { get; set; }
+        public IEnumerable<Account> Accounts { get; set; }
+
+        public OwnerExtended()
+        {
+        }
 
         public OwnerExtended(Owner owner)
         {

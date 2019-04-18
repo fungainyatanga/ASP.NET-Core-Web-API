@@ -1,0 +1,15 @@
+2019-04-17 09:51:35.6234 INFO Returned all owners from the database.
+2019-04-17 09:51:36.3083 ERROR Something went wrong inside DeleteOwner action : Unknown column 'a.DateCreated' in 'field list'
+2019-04-17 14:47:10.3660 INFO Returned all owners from the database.
+2019-04-17 14:53:34.2694 INFO Returned all owners from the database.
+2019-04-17 15:50:34.3599 INFO Returned all owners from the database.
+2019-04-17 16:09:41.2308 INFO Returned all owners from the database.
+2019-04-17 16:22:34.5474 INFO Returned all owners from the database.
+2019-04-17 16:38:28.7162 INFO Returned all owners from the database.
+2019-04-17 16:38:31.5250 INFO Returned all owners from the database.
+2019-04-17 16:38:33.1555 INFO Returned all owners from the database.
+2019-04-17 16:38:34.6569 INFO Returned all owners from the database.
+2019-04-17 16:38:35.8181 INFO Returned all owners from the database.
+2019-04-17 16:38:37.3324 INFO Returned all owners from the database.
+2019-04-17 19:29:52.6524 INFO Returned all owners from the database.
+2019-04-17 19:56:11.9867 INFO Returned all owners from the database.
