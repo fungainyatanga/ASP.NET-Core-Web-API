@@ -6,17 +6,11 @@
 
 
 <script>
-import OwnerService from '@/api-services/owner.service';
+import OwnerService from '@/api-services/owner.service'
 
 export default {
 name : 'Home',
-create() {
-  OwnerService.getAll().then((response) => {
-    console.log(response.data);
-    }).catch((error) => {
-      console.log(error.response.data);
-  });
-}
+
 };
 </script>
 

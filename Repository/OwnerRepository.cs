@@ -3,10 +3,12 @@ using Entities;
 using Entities.ExtendedModels;
 using Entities.Extensions;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -18,43 +20,47 @@ namespace Repository
         }
 
        
-        public IEnumerable<Owner> GetAllOwners()
+        public async Task<IEnumerable<Owner>> GetAllOwnersAsync()
         {
-            return FindAll().OrderBy(ow => ow.Name);
+            var owners = await FindAllAsync();
+            return owners.OrderBy(x => x.Name);
         }
 
-        public Owner GetOwnerById(Guid ownerId)
+        public async Task<Owner> GetOwnerByIdAsync(Guid ownerId)
         {
-            return FindByCondition(owner => owner.Id.Equals(ownerId))
-                .DefaultIfEmpty(new Owner())
-                .FirstOrDefault();
+            var owner = await FindByConditionAsync(o => o.Id.Equals(ownerId));
+
+            return owner.DefaultIfEmpty(new Owner()).FirstOrDefault();
         }
-       
-        public OwnerExtended GetOwnerWithDetails(Guid ownerId)
+
+        public async Task<OwnerExtended> GetOwnerWithDetailsAsync(Guid ownerId)
         {
-            return new OwnerExtended(GetOwnerById(ownerId))
+            var owner = await GetOwnerByIdAsync(ownerId);
+
+            return new OwnerExtended(owner)
             {
-                Accounts = RepositoryContext.Accounts.Where(a => a.OwnerId == ownerId)
+                Accounts = await RepositoryContext.Accounts.Where(a => a.OwnerId == ownerId).ToListAsync()
+
             };
         }
-        public void CreateOwner(Owner owner)
+        public async Task CreateOwnerAsync(Owner owner)
         {
             owner.Id = Guid.NewGuid();
             Create(owner);
-            Save();
+            await SaveAsync();
         }
 
-        public void UpdateOwner(Owner dbOwner, Owner owner)
+        public async Task UpdateOwnerAsync(Owner dbOwner, Owner owner)
         {
             dbOwner.Map(owner);
             Update(dbOwner);
-            Save();
+            await SaveAsync();
         }
 
-        public void DeleteOwner(Owner owner)
+        public async Task DeleteOwnerAsync(Owner owner)
         {
             Delete(owner);
-            Save();
+            await SaveAsync();
         }
     }
 }
